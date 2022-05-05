@@ -3,7 +3,17 @@ entries:
   teste-image-updater:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-05-05T11:11:01.903808278-03:00"
+    created: "2022-05-05T11:21:32.391394073-03:00"
+    description: A Helm chart for Kubernetes
+    digest: 48a2700ad3b2f9e3aa5af4874472ed2762e54736eac5b7ea3e7000ec7d6e725d
+    name: teste-image-updater
+    type: application
+    urls:
+    - teste-image-updater-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-05T11:21:32.39120155-03:00"
     description: A Helm chart for Kubernetes
     digest: eb98cc1799b71a14f7b0bbc576a709759e38ec33ab7a2483c846e21a74e579bb
     name: teste-image-updater
@@ -11,4 +21,4 @@ entries:
     urls:
     - teste-image-updater-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-05T11:11:01.903404119-03:00"
+generated: "2022-05-05T11:21:32.390891727-03:00"
