@@ -20,7 +20,7 @@ spec:
       containers:
       - name: poc-argocd
         {{- if .Values.image.tag }}
-        image: {{ .Values.image.name | lower }}@{{ .Values.image.tag | lower }}
+        image: {{ .Values.image.name | lower }}:{{ .Values.image.tag | lower }}
         {{- else }}
         image: {{ .Values.image.name | lower }}:{{ .Values.image.nametag | lower }}
         {{- end }}
