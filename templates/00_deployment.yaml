@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: {{ .Values.appname }}
+  name: {{ .Values.appname }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ .Values.appname }}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{ .Values.appname }}
+    spec:
+      containers:
+      - name: poc-argocd
+        {{- if .Values.image.tag }}
+        image: {{ .Values.image.name | lower }}@{{ .Values.image.tag | lower }}
+        {{- else }}
+        image: {{ .Values.image.name | lower }}:{{ .Values.image.nametag | lower }}
+        {{- end }}
+        ports:
+        - containerPort: {{ .Values.containerport }}
+          name: http

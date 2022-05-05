@@ -1,0 +1,6 @@
+appname: teste-image-updater
+containerport: 80
+image:
+  name: cleitonrnovotni/poc-argocd
+  nametag: latest
+url: poc.argocd.com.br
